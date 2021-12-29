@@ -6,8 +6,8 @@
 }
 .container .card {
   position: relative;
-  width: 320px;
-  height: 180px;
+  width: 340px;
+  height: 200px;
   margin: 20px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -27,7 +27,7 @@
   flex-direction: column;
   z-index: 10;
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: 1s;
@@ -39,11 +39,11 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 24px;
   text-align: left;
   margin: 20px 0 15px;
-  line-height: 1.1em;
+  line-height: 0.8em;
   transition: 0.5s;
   opacity: 0;
   margin-left: 20px;
@@ -58,6 +58,8 @@
   font-size: 14px;
   font-weight: 400;
   text-transform: initial;
+  display: inline-block;
+  margin-top: 10px;
 }
 .container .card .content .sci {
   position: relative;
@@ -81,5 +83,4 @@
   font-size: 24px;
 }
 img {
-  height: 400px;
 }

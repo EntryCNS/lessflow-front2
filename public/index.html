@@ -37,7 +37,13 @@
       }
       * {
         margin: 0;
+
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;
         padding: 0;
+      }
+      *::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
       }
     </style>
   </head>

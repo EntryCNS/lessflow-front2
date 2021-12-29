@@ -2,37 +2,44 @@ import React from "react";
 import "../styles/card.css";
 import img from "../img/im.jpeg";
 
-const Card = () => {
+const Card = ({ article }) => {
   return (
     <div>
       <section>
-        <div class="container">
-          <div class="card">
-            <div class="imgBx">
-              <img src={img} alt="" />
+        <div className="container">
+          <div className="card">
+            <div className="imgBx">
+              <img
+                src={article.thumbnailUrl}
+                style={{ height: "100%" }}
+                alt=""
+              />
             </div>
-            <div class="content">
-              <div class="contentBx">
+            <div className="content">
+              <div className="contentBx">
                 <h2>
-                  ksh5324
+                  #{article.keyword}
                   <br />
-                  <span>Frontend Developer</span>
+                  <span>
+                    {article.articleTitles[0]}외{" "}
+                    {article.articleTitles.length - 1}개
+                  </span>
                 </h2>
               </div>
-              <ul class="sci">
+              <ul className="sci">
                 <li style={{ "--i": 1 }} aria-hidden="true">
                   <a href="#">
-                    <i class="fab fa-facebook-square"></i>
+                    <i className="fab fa-facebook-square"></i>
                   </a>
                 </li>
                 <li style={{ "--i": 2 }}>
                   <a href="#">
-                    <i class="fab fa-twitter-square"></i>
+                    <i className="fab fa-twitter-square"></i>
                   </a>
                 </li>
                 <li style={{ "--i": 3 }}>
                   <a href="#">
-                    <i class="fab fa-github"></i>
+                    <i className="fab fa-github"></i>
                   </a>
                 </li>
               </ul>
