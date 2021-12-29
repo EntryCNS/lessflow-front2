@@ -9,6 +9,7 @@ const Card = ({ article }) => {
         <div className="container">
           <div className="card">
             <div className="imgBx">
+              <div className="des">#{article.keyword}</div>
               <img
                 src={article.thumbnailUrl}
                 style={{ height: "100%" }}
@@ -26,23 +27,6 @@ const Card = ({ article }) => {
                   </span>
                 </h2>
               </div>
-              <ul className="sci">
-                <li style={{ "--i": 1 }} aria-hidden="true">
-                  <a href="#">
-                    <i className="fab fa-facebook-square"></i>
-                  </a>
-                </li>
-                <li style={{ "--i": 2 }}>
-                  <a href="#">
-                    <i className="fab fa-twitter-square"></i>
-                  </a>
-                </li>
-                <li style={{ "--i": 3 }}>
-                  <a href="#">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

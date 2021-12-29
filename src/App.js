@@ -9,13 +9,23 @@ import TItleAndSearch from "./components/TItleAndSearch";
 import config from "./config/apiconfig";
 
 const App = () => {
+  const [text, setText] = useState("");
   const [data, setData] = useState([]);
+  const [temp, setTemp] = useState([]);
+
   useEffect(() => {
     axios.get(`${config.API_CONFIG}/articles`).then((res) => {
       console.log(res.data.data);
       setData(res.data.data);
+      setTemp(res.data.data);
     });
   }, []);
+
+  useEffect(() => {
+    const fil = data?.filter((article) => article.keyword.includes(text));
+
+    setTemp(fil);
+  }, [text]);
 
   return (
     <div>
@@ -40,7 +50,7 @@ const App = () => {
           paddingTop: "100px",
         }}
       >
-        <TItleAndSearch />
+        <TItleAndSearch text={text} setText={setText} />
         <div
           style={{
             width: "90%",
@@ -50,7 +60,7 @@ const App = () => {
           }}
         >
           <div style={{ width: "90%", display: "flex", flexWrap: "wrap" }}>
-            {data?.map((article, index) => {
+            {temp?.map((article, index) => {
               return <Card article={article} key={index} />;
             })}
           </div>
