@@ -2,11 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Viewer from './components/Viewer'
 import reportWebVitals from './reportWebVitals';
+
+const pathMapper = (path) => {
+  switch(path) {
+    case '/viewer' :
+      return (<Viewer/>)
+    default :
+      return (<App/>)
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {
+      pathMapper(document.location.pathname)
+    }
   </React.StrictMode>,
   document.getElementById('root')
 );

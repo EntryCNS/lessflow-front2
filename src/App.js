@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
 import MainWindow from "./components/MainWindow";
 import SearchBar from "./components/SearchBar";
+import Viewer from "./components/Viewer";
 import Subform from "./components/Subform";
 import TItleAndSearch from "./components/TItleAndSearch";
 import config from "./config/apiconfig";
