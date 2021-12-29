@@ -9,6 +9,7 @@ const MainWindow = () => {
   const [keyword, setKeyword] = useState("");
 
   const onSubmit = (e) => {
+    //   alert();
     e.preventDefault();
     axios
       .post(`${config.API_CONFIG}/articles`, {
@@ -18,6 +19,7 @@ const MainWindow = () => {
       .then((res) => {
         console.log(res.data.data.araticleAccessId);
       });
+    alert("요약된 영상이 곧 보내집니다. 조금만 기다려 주세요");
   };
 
   const onChangeEmail = (e) => {
