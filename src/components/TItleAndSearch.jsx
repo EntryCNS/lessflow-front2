@@ -3,9 +3,9 @@ import SearchBar from "./SearchBar";
 import "../styles/searchBar.css";
 import { useState } from "react/cjs/react.development";
 
-const TItleAndSearch = () => {
+const TItleAndSearch = ({ text, setText }) => {
   const [state, setState] = useState(false);
-  const [text, setText] = useState("");
+
   const onClick = () => {
     setState(!state);
     setText("");
