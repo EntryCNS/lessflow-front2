@@ -1,11 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+* {
+  font-family: "Noto Sans KR";
+}
+
 .title__container {
   text-align: right;
+  /* width: 1000px; */
 }
 .title__sub {
   color: #fff;
   padding: 10px;
-  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-right: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: right;
 }
+
 .title__main {
   color: #fff;
+  padding: 10px;
+  padding-top: 0px;
+  padding-right: 30px;
+  font-size: 54px;
+  margin-bottom: 50px;
+}
+
+.Contain {
+  width: 1000px;
+}
+
+.example__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.example__element {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 22px;
+}
+
+.example__curly {
+  font-weight: 900;
+  font-size: 120px;
+  text-align: center;
+}
+
+.example_phrase {
+  font-weight: 700;
+  font-size: 34px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.example__elementDes {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 10px;
+  color: gray;
 }
