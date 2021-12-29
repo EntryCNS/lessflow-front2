@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MainWindow from "./components/MainWindow";
 import Subform from "./components/Subform";
 
 const App = () => {
@@ -7,9 +8,13 @@ const App = () => {
       style={{
         width: "100%",
         height: "100%",
-        background: "#000",
+        background: "#111111",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
       }}
     >
+      <MainWindow />
       <Subform />
     </div>
   );
